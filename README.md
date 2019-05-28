@@ -1,4 +1,4 @@
-This is ToDo Web Application.
+This is a ToDo Web Application written in TypeScript using React. 
 
 The project was set up using the boilerplate from the following repository: https://github.com/saurabhpati/react-ts-webpack-boilerplate
 
