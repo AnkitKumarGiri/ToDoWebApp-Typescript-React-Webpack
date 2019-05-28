@@ -1,6 +1,14 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primary: teal;
+
 body{
   background: #ffd5;
   margin: 20px;
+}
+
+button{
+  color: primary;
 }
 .list{
   display: flex;
