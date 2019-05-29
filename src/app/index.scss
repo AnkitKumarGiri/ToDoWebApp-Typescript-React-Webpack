@@ -1,13 +1,47 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-$primary: teal;
+$colors: (
+  primary: teal,
+  accent: #FFF6BB,
+);
+
+$padding: 15px;
+$border: 20px;
+
+@function color($color-name){
+  @return map-get($colors, $color-name)
+}
+
+html {
+  height: 100%;
+}
 
 body{
-  background: #ffd5;
+  @extend html;
+  
+  font-family: 'ZCOOL KuaiLe', cursive;
+  background: color(primary);
   margin: 20px;
 }
 
-button{
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lighten(color(accent), 5%);
+  }
+}
+
+.select-list-item {
+  display: inline-block;
+  margin-left: max(10px);
+}
+
+button{ 
   color: primary;
 }
 .list{
@@ -25,17 +59,29 @@ button{
   flex-direction: row;
 }
 h1{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  padding: $padding;
+  display: block;
+  text-decoration: none;
+  text-decoration: uppercase;
 }
 
 .things-to-do{
+  clip-path: polygon(100% 0, 100% 100%, 48% 100%, 0 100%, 0 0);
+  background-color: map-get($colors, accent );
   margin: 20px 10% 0 10%;
+  padding: 20px;
   align-content: left;
+  border-radius: $border;
 }
 
 .done{
+  // clip-path: polygon(100% 0, 100% 100%, 48% 100%, 0 100%, 0 0);
+  background-color: map-get($colors, accent );
   margin: 20px 0 0 10%;
+  padding: 20px;
   align-content: right;
+  border-radius: $border;
 }
 
 .hide{
